@@ -929,7 +929,7 @@
         async function callGeminiAPI(apiKey, modelName, imageData, mimeType, withSolution) {
             const prompt = `Analyze this image containing multiple-choice questions (MCQs). Extract the questions, options, and ${withSolution ? 'provide solutions' : 'do not provide solutions'}. Follow these rules:
 
-            1. Format each MCQ ${withSolution ? 'and its solution ' : ''}as a separate block.
+            1. Format each MCQ ${withSolution ? 'and its solution ' : ''}as a separate block give if there one or more mcq .
             2. Left-align all content within each block.
             3. Use numbers (1, 2, 3, 4) instead of letters for options.
             4. Preserve the original question numbers from the image.
