@@ -938,13 +938,13 @@
             7. If there's a table in the question, format it using HTML table tags. Use the class "mcq-table" for the table element.
             8. Use this format for your output:
 
-            [Original Question number]. [Question text ) translate to tamil ( with english and tamil mcq)]
+            [Original Question number]. [Question text ) translate to tamil ( with english and tamil mcq)] ( tamil not tanglish
             [HTML table, if present]
             1. [Option 1]
             2. [Option 2]
             3. [Option 3]
             4. [Option 4] ✅ (if this is the correct answer)
-            ${withSolution ? 'Solution: [Detailed explanation of the solution with complete calculations, presented line by line for readability]' : ''}
+            ${withSolution ? 'Solution: [Detailed explanation of the solution with complete calculations, presented line by line for readability or if there already solution available use that solution without modification]' : ''}
 
             9. Do not use LaTeX formatting. Present all content in plain text.
             10. Use '^' for exponents instead of HTML superscript tags. For example, write 'x^2' .
@@ -952,9 +952,35 @@
             ${withSolution ? '12. Prioritize accuracy in all calculations and logic.' : ''}
             13. Separate each MCQ block with two blank lines.
             14. Do not include phrases like "Therefore, the correct answer is...".
+            sample :
+            15. The population of a town increases at the rate of 10% every year. The present population is 1,000. In how many years will the population become 1,331? 
+                (ஒரு நகரத்தின் மக்கள் தொகை ஒவ்வொரு ஆண்டும் 10% விகிதத்தில் அதிகரிக்கிறது. தற்போதைய மக்கள் தொகை 1,000. எத்தனை ஆண்டுகளில் மக்கள் தொகை 1,331 ஆக மாறும்?)
+             1. 3 ✅
+             2. 2.5 
+             3. 2 (2)
+             4. 3.5 (3.5)
+             Solution:
+             Let, n years will the population become 1,331.
+             We know that,
+             A = P [1 + (r/100)]^n
+             1331 = 1000 [1 + (10/100)]^n
+             1331 = 1000 [1 + (1/10)]^n
+             1331 = 1000 [11/10]^n
+             1331/1000 = [11/10]^n
+             (11/10)^3 = (11/10)^n
+             n = 3 years
+             n ஆண்டுகள் மக்கள் தொகை 1,331 ஆக மாறும் என்க.
+             நமக்குத் தெரியும்,
+             A = P [1 + (r/100)]^n
+             1331 = 1000 [1 + (10/100)]^n
+             1331 = 1000 [1 + (1/10)]^n
+             1331 = 1000 [11/10]^n
+             1331/1000 = [11/10]^n
 
+             16. if solution is availabele use that solution without modification 
+             
             Your primary goal is to provide accurate, well-formatted MCQs${withSolution ? ' and solutions' : ''} based on the image content provided.`;
-
+            
             const maxRetries = 5;
             const baseDelay = 1000; // 1 second
 
