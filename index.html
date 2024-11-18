@@ -497,10 +497,10 @@
         </div>
 
         <div id="appContent" style="display: none;">
-            <input type="text" id="apiKey" placeholder="Enter your Gemini API Key" style="width: 100%; padding: 12px; margin-bottom: 20px; border-radius: 8px; border: 1px solid var(--border-color);">
+            <input type="text" id="apiKey" placeholder="Enter your INPUT" style="width: 100%; padding: 12px; margin-bottom: 20px; border-radius: 8px; border: 1px solid var(--border-color);">
             <select id="modelSelect" style="width: 100%; padding: 12px; margin-bottom: 20px; border-radius: 8px; border: 1px solid var(--border-color);">
-                <option value="gemini-1.5-pro-latest">Gemini 1.5 Pro</option>
-                <option value="gemini-1.0-pro-latest">Gemini 1.0 Pro</option>
+                <option value="gemini-1.5-pro-latest">GOAT</option>
+                <option value="gemini-exp-1114">MASTER</option>
             </select>
             <div>
                 <label for="pdfInput" class="file-input-label">
@@ -938,7 +938,7 @@
             7. If there's a table in the question, format it using HTML table tags. Use the class "mcq-table" for the table element.
             8. Use this format for your output:
 
-            [Original Question number]. [Question text]
+            [Original Question number]. [Question text ) translate to tamil ( with english and tamil mcq)]
             [HTML table, if present]
             1. [Option 1]
             2. [Option 2]
@@ -947,7 +947,7 @@
             ${withSolution ? 'Solution: [Detailed explanation of the solution with complete calculations, presented line by line for readability]' : ''}
 
             9. Do not use LaTeX formatting. Present all content in plain text.
-            10. Use '^' for exponents instead of HTML superscript tags. For example, write 'x^2' instead of 'x<sup>2</sup>'.
+            10. Use '^' for exponents instead of HTML superscript tags. For example, write 'x^2' .
             11. If you detect a diagram or complex image in the question, add the fire emoji (🔥) at the beginning of the question text.
             ${withSolution ? '12. Prioritize accuracy in all calculations and logic.' : ''}
             13. Separate each MCQ block with two blank lines.
@@ -1193,7 +1193,7 @@
                             ]
                         }],
                         generationConfig: {
-                            temperature: 0.7,
+                            temperature: 0.4,
                             topK: 40,
                             topP: 0.95,
                             maxOutputTokens: 8192,
